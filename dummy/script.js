@@ -1,23 +1,20 @@
 // Заставьте это работать
-let Dummy = new function Dummy() {
-  let instance;
-  this.value = 'dummy';
 
-  function Dummy() {
-    if (!instance) instance = this;
-    else return instance;
+let instance;
+this.value = 'dummy';
 
-    Dummy.prototype.setValue = function (value) {
-      this.value = value;
-    };
+function Dummy() {
+  if (!instance) instance = this;
+  else return instance;
 
-    Dummy.prototype.getValue = function () {
-      return this.value;
-    };
-  }
+  Dummy.prototype.setValue = function (value) {
+    this.value = value;
+  };
 
-  return Dummy;
-};
+  Dummy.prototype.getValue = function () {
+    return this.value;
+  };
+}
 
 
 // Используем

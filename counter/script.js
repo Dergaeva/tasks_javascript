@@ -9,13 +9,11 @@ window.onload = function () {
   function counterClick() {
     count++;
     if (count < 4) {
-      counter.innerHTML = 'Click me ' + count;
+      this.innerHTML = 'Click me ' + count;
     }
     else {
-      counter.removeEventListener("click", counterClick);
+      this.removeEventListener("click", counterClick);
     }
   }
-
   counter.addEventListener("click", counterClick);
-
 };
